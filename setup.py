@@ -21,7 +21,7 @@
 
 from setuptools import setup, find_packages
 
-PLUGIN_ENTRY_POINT = 'mozilla_local = neon_tts_plugin_mozilla_local:MozillaTTS'
+PLUGIN_ENTRY_POINT = 'mozilla_local = neon_tts_plugin_mozilla_local:MozillaLocalTTS'
 
 with open("README.md", "r") as f:
     long_description = f.read()
