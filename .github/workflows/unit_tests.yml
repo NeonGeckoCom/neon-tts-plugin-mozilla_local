@@ -1,0 +1,30 @@
+# This workflow will run unit tests
+
+name: Run Unit Tests
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Test Mozilla TTS
+        run: |
+          pip install pytest pytest-timeout
+          pytest tests/test_mtts.py --junitxml=tests/tts-test-results.xml
+      - name: Upload TTS test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: pytest-results-3.6
+          path: tests/tts-test-results.xml
+        if: ${{ always() }}
