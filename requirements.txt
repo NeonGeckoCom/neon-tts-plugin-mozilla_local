@@ -1,3 +1,2 @@
 TTS~=0.0.13
-holmesv @ git+https://github.com/HelloChatterbox/holmesV
 neon_utils @ git+https://github.com/NeonGeckoCom/neon-skill-utils
