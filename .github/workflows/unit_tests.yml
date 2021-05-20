@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
           pip install holmesv
+          pip install -r requirements.txt
           sudo apt install -y libsndfile1
       - name: Test Mozilla TTS
         run: |
