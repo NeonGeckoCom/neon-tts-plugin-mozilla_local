@@ -26,12 +26,12 @@ from pprint import pprint
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "res"))
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from neon_tts_plugin_mozilla import MozillaTTS
+from neon_tts_plugin_mozilla_local import MozillaLocalTTS
 
 
 class TestMozilla(unittest.TestCase):
     def setUp(self) -> None:
-        self.mTTS = MozillaTTS()
+        self.mTTS = MozillaLocalTTS()
 
     def doCleanups(self) -> None:
         try:
