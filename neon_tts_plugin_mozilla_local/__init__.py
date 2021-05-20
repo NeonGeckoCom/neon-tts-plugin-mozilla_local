@@ -34,13 +34,13 @@ from mycroft.metrics import Stopwatch
 LOG.name = "MozillaTTS"
 
 
-class MozillaTTS(TTS):
+class MozillaLocalTTS(TTS):
 
     def __init__(self, lang="en-us", config=None):
         config = config or get_neon_tts_config().get("mozilla", {})
-        super(MozillaTTS, self).__init__(lang, config, MozillaTTSValidator(self),
-                                         audio_ext="mp3",
-                                         ssml_tags=["speak"])
+        super(MozillaLocalTTS, self).__init__(lang, config, MozillaTTSValidator(self),
+                                              audio_ext="mp3",
+                                              ssml_tags=["speak"])
         self.manager = ModelManager()
         self.models = self.manager.list_models()
         self.preferred_model = config.get("preferred_model", "tacotron2-DDC")
@@ -121,4 +121,4 @@ class MozillaTTSValidator(TTSValidator):
         pass
 
     def get_tts_class(self):
-        return MozillaTTS
+        return MozillaLocalTTS

@@ -21,7 +21,7 @@
 
 from setuptools import setup, find_packages
 
-PLUGIN_ENTRY_POINT = 'mozilla = neon_tts_plugin_mozilla:MozillaTTS'
+PLUGIN_ENTRY_POINT = 'mozilla_local = neon_tts_plugin_mozilla_local:MozillaTTS'
 
 with open("README.md", "r") as f:
     long_description = f.read()
@@ -41,7 +41,7 @@ setup(
     name='neon-tts-plugin-mozilla',
     version=version,
     description='A Mozilla TTS plugin for Neon',
-    url='https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla',
+    url='https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_local',
     author='Neongecko',
     author_email='developers@neon.ai',
     license='NeonAI License v1.0',
