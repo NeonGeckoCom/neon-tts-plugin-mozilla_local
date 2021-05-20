@@ -37,7 +37,7 @@ LOG.name = "MozillaTTS"
 class MozillaLocalTTS(TTS):
 
     def __init__(self, lang="en-us", config=None):
-        config = config or get_neon_tts_config().get("mozilla", {})
+        config = config or get_neon_tts_config().get("mozilla_local", {})
         super(MozillaLocalTTS, self).__init__(lang, config, MozillaTTSValidator(self),
                                               audio_ext="mp3",
                                               ssml_tags=["speak"])
@@ -58,7 +58,7 @@ class MozillaLocalTTS(TTS):
             synthesizer = self._get_synthesizer(request_lang)
             with stopwatch:
                 wav_data = synthesizer.tts(sentence)
-            LOG.debug(f"Polly time={stopwatch.time}")
+            LOG.debug(f"Synthesis time={stopwatch.time}")
 
             with stopwatch:
                 synthesizer.save_wav(wav_data, wav_file)

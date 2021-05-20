@@ -38,7 +38,7 @@ with open("./requirements.txt", "r", encoding="utf-8") as r:
     requirements = r.readlines()
 
 setup(
-    name='neon-tts-plugin-mozilla',
+    name='neon-tts-plugin-mozilla_local',
     version=version,
     description='A Mozilla TTS plugin for Neon',
     url='https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_local',
