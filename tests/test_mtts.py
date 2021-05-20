@@ -31,7 +31,7 @@ from neon_tts_plugin_mozilla_local import MozillaLocalTTS
 
 class TestMozilla(unittest.TestCase):
     def setUp(self) -> None:
-        self.mTTS = MozillaLocalTTS()
+        self.mTTS = MozillaLocalTTS(config={"preferred_model": "tacotron2-DDC"})
 
     def doCleanups(self) -> None:
         try:
