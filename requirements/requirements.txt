@@ -1,2 +1,2 @@
 TTS~=0.0.13
-neon_utils @ git+https://github.com/NeonGeckoCom/neon-skill-utils
+neon-utils>=0.5.7
