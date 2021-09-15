@@ -59,6 +59,8 @@ setup(
     name='neon-tts-plugin-mozilla_local',
     version=version,
     description='A Mozilla TTS plugin for Neon',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_local',
     author='Neongecko',
     author_email='developers@neon.ai',
