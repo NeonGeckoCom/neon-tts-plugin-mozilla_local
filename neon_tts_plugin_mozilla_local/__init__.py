@@ -25,6 +25,7 @@ from TTS.utils.synthesizer import Synthesizer
 from neon_utils.configuration_utils import get_neon_tts_config
 from neon_utils.logger import LOG
 from neon_utils.parse_utils import format_speak_tags
+
 try:
     from neon_audio.tts import TTS, TTSValidator
 except ImportError:
